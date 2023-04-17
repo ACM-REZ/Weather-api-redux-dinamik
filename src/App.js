@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import colors from './utils/constants';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCity } from './reducers/weather/actions';
@@ -39,7 +39,7 @@ function App() {
     if(!loaded) {
       dispatch(fetchCity('orenburg'))
     } 
-  }, [loaded])
+  })
 
   return (
     <div className={`${color.background_color} h-screen ease-in-out`}>

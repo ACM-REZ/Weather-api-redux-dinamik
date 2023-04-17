@@ -15,21 +15,15 @@ const InitialState = {
         wind: {
             speed: null,
         },
-        sys: {
-            type: 1,
-            id: 9044,
-            country: "RU",
-            sunrise: 1681694402,
-            sunset: 1681744688
-        },
-        id: 515003,
         name: "Orenburg",
     }
 }
 
+const GET_CITY = "GET_CITY";
+
 export default (state = InitialState, {type, payload}) => {
     switch(type) {
-        case "GET_CITY": 
+        case GET_CITY: 
             return {
                 ...state, 
                 cityWeather: {...payload},
@@ -40,4 +34,4 @@ export default (state = InitialState, {type, payload}) => {
     }
 }
 
-export const changeCity = (payload) => ({type: 'GET_CITY', payload})
+export const changeCity = (payload) => ({type: GET_CITY, payload})
