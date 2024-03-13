@@ -45,7 +45,7 @@ function App() {
     <div className={`${color.background_color} h-screen ease-in-out`}>
       <div className="container mx-auto flex justify-center h-full px-5">
         <div
-          className={`w-[560px] bg-white rounded-[30px] self-center shadow-2xl ${color.text_color} ease-in-out py-7`}
+          className={`w-[560px] min-h-[560px] bg-white rounded-[30px] self-center shadow-2xl ${color.text_color} ease-in-out py-7 relative`}
         >
           {loaded ? (
             <Card

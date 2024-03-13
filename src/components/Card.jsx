@@ -26,13 +26,15 @@ export const Card = ({ weather, main, wind, color }) => {
       console.log("hello");
   }
 
+  console.log(weather.description);
+
   return (
     <div className="w-10/12 mx-auto">
       <Input color={color.background_color} />
       <img src={img} alt="#" className="mt-5 mx-auto ease-in-out"></img>
       <MainInfo
         temp={main.temp.toFixed(0) - 273}
-        decription={weather.description}
+        description={weather.description}
       />
       <Info
         color={color}
