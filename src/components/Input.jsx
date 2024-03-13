@@ -45,6 +45,14 @@ export const Input = ({ color }) => {
       ...styles,
       maxHeight: "205px",
     }),
+    indicatorSeparator: (styles) => ({
+      ...styles,
+      display: "none",
+    }),
+    dropdownIndicator: (styles) => ({
+      ...styles,
+      paddingRight: "1rem",
+    }),
   };
 
   const customControl = ({ children, isSelected, ...props }) => {
